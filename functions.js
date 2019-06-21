@@ -257,12 +257,10 @@ function isOdd(n){
 
 var restaurant = {reviews: 0}
 function incrementReviews(restaurant){
-    if (restaurant.hasOwnProperty('reviews') && restaurant.reviews == 0){
-            return 1;
-        }else if (restaurant.hasOwnProperty('reviews') && restaurant.reviews >= 1){
-            return restaurant.reviews + 1;
-        }else{
-        return "no reviews property"
+    if (restaurant.reviews){
+        return restaurant.reviews++;
+    }else{
+        return restaurant.reviews = 1;
     }
 }
 
@@ -285,9 +283,10 @@ function combine(word1, word2){
  * @return {object} circle
  */
 
-var circle = {circumference: '', area: ''}
-var r = null
-function createCircle(circle){
-    circle.circumference = 2 * Math.PI * r
-    circle.area = Math.PI * r * r
+var circle = {circumference: 2 * Math.PI * r, area: Math.PI * r * r}
+var r = 0
+function createCircle(){
+    circle.circumference;
+    circle.area
 }
+createCircle(r)
