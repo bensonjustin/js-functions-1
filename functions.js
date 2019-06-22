@@ -257,11 +257,12 @@ function isOdd(n){
 
 var restaurant = {reviews: 0}
 function incrementReviews(restaurant){
-    if (restaurant.reviews){
-        return restaurant.reviews++;
+    if (restaurant.hasOwnProperty("reviews")){
+        restaurant.reviews++;
     }else{
-        return restaurant.reviews = 1;
+        restaurant.reviews = 1;
     }
+    return restaurant;
 }
 
 /**
@@ -283,10 +284,9 @@ function combine(word1, word2){
  * @return {object} circle
  */
 
-var circle = {circumference: 2 * Math.PI * r, area: Math.PI * r * r}
-var r = 0
-function createCircle(){
-    circle.circumference;
-    circle.area
+var circle = {circumference: 0, area: 0}
+function createCircle(r){
+    circle.circumference = 2 * Math.PI * r;
+    circle.area = Math.PI * r * r;
+    return circle;
 }
-createCircle(r)
